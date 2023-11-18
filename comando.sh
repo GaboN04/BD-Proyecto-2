@@ -1,0 +1,1 @@
+hadoop jar /home/gabriel/hadoop-3.2.3/share/hadoop/tools/lib/hadoop-streaming-3.2.3.jar -files ./mapper_2a.js,./reducer_2a.js -mapper ./mapper_2a.js -reducer ./reducer_2a.js -input /datos.json -output /output-prueba6 && hadoop fs -get /output-prueba6/part-00000 /home/gabriel/Downloads/BD-Proyecto02/resultado1.txt

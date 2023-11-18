@@ -2,6 +2,29 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.18.2",
-    "unirest": "^0.6.0"
-  }
+    "fs": "^0.0.1-security",
+    "natural": "^6.8.0",
+    "snowball": "^0.3.1",
+    "snowball-stemmers": "^0.6.0",
+    "unirest": "^0.6.0",
+    "webhdfs": "^1.2.0"
+  },
+  "name": "bd-proyecto02",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaboN04/BD-Proyecto-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaboN04/BD-Proyecto-2/issues"
+  },
+  "homepage": "https://github.com/GaboN04/BD-Proyecto-2#readme",
+  "description": ""
 }

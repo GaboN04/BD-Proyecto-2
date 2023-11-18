@@ -1,0 +1,14 @@
+2023-11-15 16:42:27,640 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+2023-11-15 16:42:27,909 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+2023-11-15 16:42:28,163 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/gabriel/.staging/job_1700083200316_0004
+2023-11-15 16:42:28,884 INFO mapred.FileInputFormat: Total input files to process : 1
+2023-11-15 16:42:29,771 INFO mapreduce.JobSubmitter: number of splits:2
+2023-11-15 16:42:29,954 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1700083200316_0004
+2023-11-15 16:42:29,956 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2023-11-15 16:42:30,172 INFO conf.Configuration: resource-types.xml not found
+2023-11-15 16:42:30,172 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2023-11-15 16:42:30,249 INFO impl.YarnClientImpl: Submitted application application_1700083200316_0004
+2023-11-15 16:42:30,298 INFO mapreduce.Job: The url to track the job: http://gabriel-VirtualBox:8088/proxy/application_1700083200316_0004/
+2023-11-15 16:42:30,301 INFO mapreduce.Job: Running job: job_1700083200316_0004
+2023-11-15 16:42:39,484 INFO mapreduce.Job: Job job_1700083200316_0004 running in uber mode : false
+2023-11-15 16:42:39,487 INFO mapreduce.Job:  map 0% reduce 0%
