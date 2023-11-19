@@ -46,41 +46,53 @@ const datosOrganizados = [
 
 
 
-// Función para buscar y mostrar los resultados
+// ...
+
 function search() {
   const searchInput = document.getElementById('search-input').value;
 
-  // Realizar una solicitud al servidor para obtener los datos filtrados
-  fetch(`/datos?searchInput=${searchInput}`)
-    .then(response => response.json())
-    .then(resultados => {
-      // Limpiar el contenedor de resultados antes de mostrar nuevos resultados
-      const resultsContainer = document.getElementById('results-container');
-      resultsContainer.innerHTML = '';
+  // Simulación de datos para evitar solicitudes al servidor
+  const resultados = [
+    { palabra: 'carro', titulo: 'Título 1', cantidad: 99, subtitulos: 10, referencias: 5, totalSubtitulos: 100, totalPalabras: 500 },
+    { palabra: 'carro', titulo: 'Título 2', cantidad: 55, subtitulos: 8, referencias: 3, totalSubtitulos: 120, totalPalabras: 600 },
+    // ... otros datos
+  ];
 
-      // Mostrar los resultados en el contenedor
-      resultados.forEach(resultado => {
-        const { palabra, titulo, cantidad, subtitulos, referencias } = resultado;
+  // Limpiar el contenedor de resultados antes de mostrar nuevos resultados
+  const resultsContainer = document.getElementById('results-container');
+  resultsContainer.innerHTML = '';
 
-        // Crear una nueva caja para cada resultado
-        const resultBox = document.createElement('div');
-        resultBox.classList.add('result-box');
+  // Mostrar los resultados en el contenedor
+  resultados.forEach(resultado => {
+    const { palabra, titulo, cantidad, subtitulos, referencias, totalSubtitulos, totalPalabras } = resultado;
 
-        // Agregar información al contenido de la caja
-        resultBox.innerHTML = `
-          <p>Palabra: ${palabra}</p>
-          <p>Página: ${titulo}</p>
-          <p>Cantidad de veces: ${cantidad}</p>
-          <p>Cantidad de subtítulos: ${subtitulos}</p>
-          <p>Cantidad de referencias: ${referencias}</p>
-        `;
+    // Calcular porcentajes
+    const porcentajeSubtitulos = totalSubtitulos > 0 ? (subtitulos / totalSubtitulos) * 100 : 0;
+    const porcentajePagina = totalPalabras > 0 ? (cantidad / totalPalabras) * 100 : 0;
 
-        // Agregar la caja al contenedor de resultados
-        resultsContainer.appendChild(resultBox);
-      });
-    })
-    .catch(error => console.error('Error al obtener datos del servidor:', error));
+    // Crear una nueva caja para cada resultado
+    const resultBox = document.createElement('div');
+    resultBox.classList.add('result-box');
+
+    // Agregar información al contenido de la caja
+    resultBox.innerHTML = `
+      <p>Palabra: ${palabra}</p>
+      <p>Página: ${titulo}</p>
+      <p>Cantidad de veces: ${cantidad}</p>
+      <p>Cantidad de subtítulos: ${subtitulos}</p>
+      <p>Cantidad de referencias: ${referencias}</p>
+      <p>Porcentaje en subtítulos: ${porcentajeSubtitulos.toFixed(2)}%</p>
+      <p>Porcentaje en toda la página: ${porcentajePagina.toFixed(2)}%</p>
+    `;
+
+    // Agregar la caja al contenedor de resultados
+    resultsContainer.appendChild(resultBox);
+  });
 }
+
+// ...
+
+
 
 
 
@@ -120,6 +132,8 @@ function search() {
   });
 }
 */
+
+
 // Event listener para el botón de búsqueda
 const searchButton = document.getElementById('search-button');
 searchButton.addEventListener('click', search);

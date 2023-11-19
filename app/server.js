@@ -1,9 +1,18 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const controller = require('./controller'); // Asegúrate de tener la ruta correcta
+const Controller = require('./controlador');
 
 app.use(express.static('public'));
+
+const controller = new Controller();
+controller.conectar();
+
+
+app.listen(port, () => {
+  console.log(`Servidor en ejecución en http://localhost:${port}`);
+});
+
 
 // Endpoint para obtener datos
 app.get('/datos', (req, res) => {
