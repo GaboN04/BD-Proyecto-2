@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Palabras</title>
+  <link rel="stylesheet" href="buscador-styles.css">
+</head>
+<body>
+  <header>
+    <div class="title-background"></div>
+    <h1>Buscador de Palabras</h1>
+  </header>
+  <main>
+    <form id="formBusqueda" action="/buscar" method="post">
+      <div id="search-container">
+        <input type="text" id="search-input" name="hila" placeholder="Buscar palabras...">
+        <div id="word-container" class="button-container">
+          <button type="button" id="add-word-button" onclick="addWord()">Agregar palabra</button>
+          <button type="submit" id="search-button" >Buscar</button>
+        </div>
+        <div id="search-words" name="search-words">
+          
+        </div>
+        <div id="results-container"></div>
+      </div>
+      <input id="data" type="hidden" name="data" value='hola'>
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
